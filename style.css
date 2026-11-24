@@ -129,3 +129,21 @@
 .profile-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px}
 
 .supervisor-link{text-decoration:underline;text-underline-offset:.16em}
+
+/* Paper-specific AI disclosure, kept beside the abstract. */
+.paper-actions .paper-ai > summary{display:inline-flex;align-items:center;gap:7px;margin-left:23px;min-height:36px;vertical-align:middle}
+.paper-ai > summary img{width:28px;height:28px;object-fit:contain;flex-shrink:0}
+.paper-actions .paper-ai > summary::after{margin-left:1px}
+.paper-ai > summary:hover span{text-decoration:underline;text-underline-offset:4px}
+.ai-disclosure{margin-top:18px;padding:2px 0 2px 17px;border-left:1px solid #b3b2a8;max-width:730px;background:var(--paper)}
+.paper-actions .ai-disclosure p{padding:0;margin:0 0 12px;font-size:13px;line-height:1.8}
+.paper-actions .ai-disclosure .ai-source{font-size:11px;margin-bottom:9px;color:var(--muted)}
+.ai-disclosure a{text-decoration:underline;text-underline-offset:3px}
+.ai-image-credit{display:block;color:var(--muted);font-size:9px;line-height:1.6}
+@media(max-width:720px){.paper-actions .paper-ai > summary{margin-left:16px}.ai-disclosure{padding-left:12px}.paper-actions .ai-disclosure p{font-size:12px}}
+/* Keep disclosure controls together in browsers with a details-content box. */
+.paper-actions details::details-content{display:contents}
+.paper-actions details:not([open])::details-content{display:none}
+
+/* Preserve the original badge footprint; the car opens the timestamped video. */
+.paper-ai .time-machine-link{display:inline-flex;width:28px;height:28px;flex-shrink:0;align-items:center;justify-content:center}
